@@ -20,3 +20,17 @@ TODO: Provide image and description of image. What is that $ sign, etc?
 | ``pwd`` | Tells you what the **p**resent **w**orking *d*irectory is. Your shell is always running from a directory! |
 | ``cd`` | *C*hange *d*irectory. Navigate the file system on your computer. |
 | ``type`` | Helps you learn what different commands are |
+
+## Customizing the command line to work for you
+
+### Your terminal (application)
+
+On Mac OS X, the built-in terminal application is named *Terminal.* You can select and customize themes that control colors, font, window size, etc. Many developers opt for a theme that provides light text on a dark background, such as the "Pro" theme in *Terminal*.
+
+*Introduce idea of shell customization by hidden files in your $HOME.
+
+### Bash
+
+#### `.bashrc`, `.bash_profile`, etc.
+
+Explain .profile, etc. in an accessible way.
