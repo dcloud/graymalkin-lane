@@ -53,6 +53,8 @@ Paging and printing a file to the terminal, using `less`:
 
 ![Screenshot: Paging and printing a file to the terminal, using `less`](images/less.png)
 
+You'll need to how to navigate in `less`. To move forward in the document you can press `f` or the *spacebar*. To go back, press `b`. To get out of this "program", press `q`. You can press `h` for *help* or read more about these shortcuts in the *man* page (run `man less` in the terminal).
+
 ### `grep`
 
 Searching for a pattern (text, in this case) in a file. Note the `--color=auto` option to show the matches in color:
