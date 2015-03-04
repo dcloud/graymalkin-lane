@@ -28,18 +28,22 @@ There are some useful symbols that help use navigate to certain parts of the fil
 
 ## Files
 
-### Hidden files
-
 ### Text versus binary
 
-[[TODO]]
+A file is a storage container for binary or textual data. Binary is the format used for images, videos, music and similar. Text files can be store "plain" text (plain in that they contain no formatting such as bold or italic). That plain text can conform to a syntax, an arrangement of words, phrases and symbols, that can represent prose, code, markup or structured data. HTML `.html` and CSS `.css` files are text files. So are Python `.py` files and JavaScript `.js` files. CSV `.csv` and XML `.xml` files are as well. Many binary files even intersperse text content along with binary. That's how images and audio files contain metadata (author, title, caption, album).
+
+There are some files that seem like they would be text files, but are actually binary files that contain text as well. Word `.doc` documents and PDF files are excellent examples of these. If you were to try to `cat` the contents of a PDF or Word `.doc`, you'd likely see a lot of gibberish because `cat` knows how to display plain text documents, and will try to treat binary data as text as well. If you run `cat` on a large file, remember that <kbd>Ctrl+c</kbd> will abort the currently running program!
+
+### Hidden files
+
+UNIX-based operating systems have a convention for "hiding" files from view: if you start a filename with a period, that file will not be visible by default. On Mac OS X, the operating system creates files named `.DS_Store` in directories to store information about how that folder should be displayed in the Finder. Both OS X and Linux can use hidden files in your home directory to configure various aspects of the command line. We'll look at those files when we [customize the command line](05-customizing.md).
 
 ### A note on spaces in file and folder names
 
-Users of modern [GUI](abbr:Graphical User Interface) operating systems are accustomed to using _spaces_ in file and folder names (i.e. using `My Great Project` as a folder name). However, programs on the command line treat spaces as a separator for parameters to a command (since many commands act on multiple parameters). So when using files or folders with spaces in the name as parameters to a command, you should place quotation marks around them. So if you want to output a text file to the terminal, and that file has spaces in the name, you would type something like:
+Users of modern [GUI](abbr:Graphical User Interface) operating systems are accustomed to using _spaces_ in file and folder names (i.e. using `My Great Project.txt` as a file name). However, programs on the command line treat spaces as a separator for parameters to a command (since many commands act on multiple parameters). So when using files or folders with spaces in the name as parameters to a command, you should place quotation marks around them. So if you want to output a text file to the terminal, and that file has spaces in the name, you would type something like:
 
 ```
-cat "/path/to/My Great Project"
+cat "/path/to/My Great Project.txt"
 ```
 
 ## More commands: Making, renaming and moving files and directories
