@@ -11,6 +11,27 @@ On Mac OS X, the built-in terminal application, aka _way of accessing the comman
 
 ## Add command aliases
 
+### `ls` improved
+
+```
+alias ls='ls -hFG'
+alias ll="ls -alF"
+```
+
+### Safer `rm`, `cp`, and `mv`
+
+```
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+```
+
+### Color grep
+
+```
+alias grep='grep --color=always'
+```
+
 ### Bash
 
 #### `.bashrc`, `.bash_profile`, etc.
