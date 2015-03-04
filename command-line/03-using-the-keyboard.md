@@ -43,4 +43,4 @@ That's right, the things you've typed in the command line and run (typically) ge
 | <kbd>Ctrl+s</kbd> | Search forward in your command history to more recent commands. Useful after <kbd>Ctrl+r</kbd> a few too many times. |
 | <kbd>Ctrl+c</kbd> | Cancel your search. |
 
-
+You can also use the `history` to inspect or edit your command line history.
