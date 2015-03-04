@@ -6,14 +6,14 @@ Here are some basic commands that should get you started. One useful for learnin
 
 | Command name | What it does | Example |
 | ------------ | ------------ | ------- |
-| ``man`` | Shows a manual page for a particular command, if available. | ``man ls`` will show you how to use the `ls` command, with options.|
+| ``man`` | Shows a **man**ual page for a particular command, if available. | ``man ls`` will show you how to use the `ls` command, with options.|
 | ``ls`` | **L**i**s**t files in the current directory (aka folder) or one you specify. | ``ls /``. ``ls -la`` is very useful. See [arguments and options](#arguments-and-options) |
 | ``pwd`` | **P**rint the **w**orking **d**irectory. Your shell is always running from a directory! |
 | ``cd`` | **C**hange **d**irectory. Navigate the file system on your computer. You can provide a [relative or absolute path](04-files.md#follow-the-path), or use one of the [built-in shortcuts](04-files.md#path-shortcuts)). Running `cd ~` will change your working directory to your "home" directory. |
 | ``cat`` | Con**cat**enate (link together) and print one or more files (to the terminal). Good for short documents. | ``cat 02-basic-commands.md`` |
-| ``less`` | View contents of a file in your terminal, paging the contents. Good for long documents. | ``less 02-basic-commands.md`` |
+| ``less`` | View contents of a file in your terminal, paging the contents. Good for long documents as it shows **less** than ``cat``. | ``less 02-basic-commands.md`` |
 | ``grep`` | Searches for a pattern in one or more files you specify. You can perform simple searches quickly using `fgrep`, but you can create more powerful search expressions using `grep`. | ``grep --color=auto 'terminal' command-line/02-basic-commands.md`` |
-| ``clear`` | Clears the terminal screen. | ``clear`` |
+| ``clear`` | **Clear**s the terminal screen. | ``clear`` |
 
 *Note:* Commands for working with files and directories are in the chapter on [files and filesystems](04-files.md).
 
