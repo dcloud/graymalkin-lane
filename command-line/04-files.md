@@ -28,6 +28,8 @@ There are some useful symbols that help use navigate to certain parts of the fil
 
 ## Files
 
+### Hidden files
+
 ### Text versus binary
 
 [[TODO]]
@@ -39,3 +41,18 @@ Users of modern [GUI](abbr:Graphical User Interface) operating systems are accus
 ```
 cat "/path/to/My Great Project"
 ```
+
+## More commands: Making, renaming and moving files and directories
+
+### Warnings for `cp`, `mv` and `rm`
+
+The commands `cp`, `mv` and `rm` described can overwrite or remove files/directories *without warning you first*! Files and directories that get removed or overwritten in this way will disappear. There is no "Trash" to recover them. You can make these commands ask before overwriting or removing anything by supplying the `-i` option. So use `mv -i`, `rm -i` and `cp -i` if you want to be careful.
+
+| Command name | What it does | Example |
+| ------------ | ------------ | ------- |
+| ``mkdir`` | Makes a new directory (folder) with the name or path you provide | ``mkdir stuff`` will create a directory named "stuff" in your current working directory. If you [provide a path](#follow-the-path), you can create directories practically anywhere on your computer.|
+| ``touch`` | Can "change file access and modification times", but typically used to create (empty) files. | ``touch ~/Hello.txt`` will create the file named ``Hello.txt`` in your home directory. |
+| ``mv`` | Moves or renames a file or directory | ``mv ~/Hello.txt ~/Documents/`` would move a file named ``Hello.txt`` from your home directory to the `Documents` directory that is inside your home directory.  ``mv ~/Hello.txt ~/Documents/HelloThere.txt`` would move the file *and* rename it at the same time. This also works on directories. Be careful of [spaces in file or directory names](#a-note-on-spaces-in-file-and-folder-names). **See warnings above**. |
+| ``cp`` | Copies the contents of a file from one path to another. The first argument is the source to copy from and the second argument is the path to copy to. Can copy directories of files if the `-R` option is specified. | `cp ~/Hello.txt AnotherHello.txt` will copy a file named `Hello.txt` from your home directory to a file named `AnotherHello.txt` in your current working directory. **See warnings above**. |
+| ``rm`` | Removes a file from the filesystem. Can remove remove directories if the `-d` option is provided. | ``rm -i ~/Hello.txt`` will remove the file `Hello.txt` from the home directory if it exists (and if you approve it because you added the `-i` option).  **See warnings above**. |
+| ``rmdir`` | Removes an empty directory from the filesystem. Sometimes directories have hidden files (this is very common on OS X) that prevent this command from working. | ``rmdir ~/Old_Stuff`` will remove the directory `Old_Stuff` from the home directory, provided it is empty. |
