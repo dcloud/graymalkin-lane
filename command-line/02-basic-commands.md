@@ -1,6 +1,6 @@
 # Commands on the command line
 
-Here are some basic commands that should get you started. One useful for learning your way around is the `man` command, which allows you to learn the syntax and options for most other commands.
+Here are some basic commands that should get you started. One useful for learning your way around is the `man` command, which allows you to learn the syntax and options for most other commands. In the terminal, you type the name of the command you want then any options or arguments after that using spaces to separate each phrase, then press <kbd>Enter</kbd> to run the command. We'll discuss arguments and options after we see a few basic commands.
 
 ## Some commands
 
@@ -12,7 +12,11 @@ Here are some basic commands that should get you started. One useful for learnin
 | ``cd`` | **C**hange **d**irectory. Navigate the file system on your computer. |
 | ``cat`` | Con**cat**enate (link together) and print one or more files (to the terminal). Good for short documents. | ``cat 02-basic-commands.md`` |
 | ``less`` | View contents of a file in your terminal, paging the contents. Good for long documents. | ``less 02-basic-commands.md`` |
-| ``grep`` | Searches for a pattern in one or more files you specify. You can perform simple searches quickly using `fgrep`, but you can create more powerful search expressions using `grep`. | ``fgrep 'terminal' command-line/02-basic-commands.md`` |
+| ``grep`` | Searches for a pattern in one or more files you specify. You can perform simple searches quickly using `fgrep`, but you can create more powerful search expressions using `grep`. | ``grep --color=auto 'terminal' command-line/02-basic-commands.md`` |
+
+## Arguments and options
+
+Arguments refers to information a command uses or needs to act. The `man` command doesn't know what manual page you want unless you specify one as an argument, e.g. `man pwd`. Some commands take multiple arguments separated by spaces. Many commands also accept one or more options  that affect the behavior of the command. Options are typically preceded by one or two minus signs. For example, `ls -l` runs the `ls` command with an option, **l**, that tells `ls` to display more information in what it calls a "long format". `ls` can also take a path as an argument, as in the example `ls /`, which tells `ls` to list files in the root directory.
 
 
 ## What do these commands look like?
