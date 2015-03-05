@@ -18,7 +18,7 @@ Why two files? Well, accorrding to `man bash`, `~/.bash_profile` is your "person
 
 This may be specific to the command line on Mac OS X, but the following snippet should be placed at the end of `~/.bash_profile`. Basically it makes sure your `~/.bashrc` is loaded in an "interactive" shell.
 
-```
+```bash
 case $- in
    *i*) source ~/.bashrc
 esac
@@ -26,7 +26,7 @@ esac
 
 You can also add the following to the top of your `~/.bashrc` to make sure it doesn't load in a non-interactive shell:
 
-```
+```bash
 [[ $- != *i* ]] && return
 ```
 
@@ -61,7 +61,7 @@ You can colorize the bash prompt and some commands also support colorized output
 
 The following is a big list of aliases for `ls`. The first line changes your command line so that when you run `ls` you are actually running `ls -hFG`, enabling color output, slashes after directory names, and unit suffixes for file sizes when file sizes are displayed.
 
-```
+```bash
 alias ls='ls -hFG'  # add colors for filetype recognition
 alias l='ls -CF'
 alias ll="ls -alF"
@@ -78,7 +78,7 @@ alias lr='ls -lR'          # recursive ls
 
 Adding the `-i` option to these commands forces them to prompt you before each potential deletion or file overwrite.
 
-```
+```bash
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -86,6 +86,22 @@ alias mv='mv -i'
 
 ### Color grep
 
-```
+```bash
 alias grep='grep --color=always'
 ```
+
+### Run a simple HTTP server using [Python](https://www.python.org)
+
+```bash
+alias serve='python -m SimpleHTTPServer $PORT'
+```
+
+Running `serve` will have Python start up a simple http server that can serve files from your computer. The `$PORT` represents a bash *variable* so that you can run `serve 9000` (or some other number) and run a web server on whatever port you want. **Note:** When you use <kbd>Ctrl+c</kbd> to abort the simple http server, Python will output a number of lines of text indicating an error, but that's okay. It's really just telling us that it was interrupted by a keyboard command, which is exactly what we did.
+
+### Print well-formatted [JSON](https://en.wikipedia.org/wiki/JSON) from a file
+
+```bash
+alias json='python -m json.tool'
+```
+
+Add that alias to your `.bashrc` and you'll have a `json` command that will print out a well-formatted representation of a (valid) JSON file. You'd run it like so: `json data.json`.
