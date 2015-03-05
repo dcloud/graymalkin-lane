@@ -18,7 +18,7 @@ Homebrew bills itself as "the missing package manager for OS X". Essentially, th
 The simplest way to install Homebrew is to follow the directions on the [Homebrew homepage](http://brew.sh). Some of the software packages as source code that needs to be compiled (made into an application), so installing the command line developer tools via `xcode-select --install` is a good idea as well.
 
 
-### .bashrc customizations for homebrew
+### Customizations for Homebrew
 
 Since Homebrew installs packages into locations that the command line does not search for commands by default, you need to tell it where to look. You do this by customizing the `PATH`, which is essentially a list of places your computer should look for commands. The code below shows some bash-style syntax that checks for the existence of the `/usr/local/bin` and `/usr/local/sbin` paths, and updates the `PATH` environment variable for each one if the specific directory path exists. The `export PATH` line is the part that actually commits the update to the command line.
 
@@ -35,6 +35,8 @@ fi
 export PATH
 ```
 
+This snippet should be added to a `~/.bash_profile` (a hidden file in your home directory) so that Homebrew-installed commands are available on login.
+
 Similarly, you can show the `man` command where to look for manual pages installed by Homebrew packages. The syntax here is similar, to above, but the environment variable being manipulated is `MANPAGE`.
 
 ```
@@ -44,3 +46,5 @@ fi
 
 export MANPATH
 ```
+
+This snippet probably "belongs" in `~/.bashrc` but you could also put it in `~/.bash_profile`.
