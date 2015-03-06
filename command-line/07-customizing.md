@@ -4,7 +4,7 @@ On Mac OS X, the built-in terminal application, aka _way of accessing the comman
 
 ### Bash
 
-[Bash]("https://en.wikipedia.org/wiki/Bash_(Unix_shell)"") is the name of a shell implementation that is very common. There are other shell implementations out there, in the same way that Mac OS X is an operating system implementation, but there is also Linux and Windows. So the command line in your terminal is *probably* provided by the bash shell.
+[Bash](https://en.wikipedia.org/wiki/Bash_\(Unix_shell\)) is the name of a shell implementation that is very common. There are other shell implementations out there, in the same way that Mac OS X is an operating system implementation, but there is also Linux and Windows. So the command line in your terminal is *probably* provided by the bash shell.
 
 #### `.bashrc`, `.bash_profile`, etc.
 
