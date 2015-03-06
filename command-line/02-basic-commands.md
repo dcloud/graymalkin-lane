@@ -13,6 +13,7 @@ Here are some basic commands that should get you started. One useful for learnin
 | ``cat`` | Con**cat**enate (link together) and print one or more files (to the terminal). Good for short documents. | ``cat 02-basic-commands.md`` |
 | ``less`` | View contents of a file in your terminal, paging the contents. Good for long documents as it shows **less** than ``cat``. | ``less 02-basic-commands.md`` |
 | ``grep`` | Searches for a pattern in one or more files you specify. You can perform simple searches quickly using `fgrep`, but you can create more powerful search expressions using `grep`. | ``grep --color=auto 'terminal' command-line/02-basic-commands.md`` |
+| ``cut`` | **Cuts** out portions of a each line of a file and displays them in the terminal. Useful for [CSV](abbr:Comma-separated Values) files. | ``cut -d , -f 1,4,7 datafile.csv`` will output values for the first, fourth and seventh columns for each row in `datafile.csv`, using a comma as the separating character |
 | ``clear`` | **Clear**s the terminal screen. | ``clear`` |
 
 *Note:* Commands for working with files and directories are in the chapter on [files and filesystems](04-files.md).
