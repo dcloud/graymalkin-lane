@@ -1,6 +1,6 @@
 # Using the keyboard
 
-The keyboard is essential to navigating and controlling the command line. In fact, your mouse or trackpad is probably of little use in the terminal. We'll go over some of basic keyboard shortcuts that get used frequently when navigating or running commands in the terminal. For a more comprehensive list, check out Wikipedia's [Bash article]("https://en.wikipedia.org/wiki/Bash_(Unix_shell)#Keyboard_shortcuts").
+The keyboard is essential to navigating and controlling the command line. In fact, your mouse or trackpad is probably of little use in the terminal. We'll go over some of basic keyboard shortcuts that get used frequently when navigating or running commands in the terminal. For a more comprehensive list, check out Wikipedia's [Bash article](https://en.wikipedia.org/wiki/Bash_\(Unix_shell\)#Keyboard_shortcuts).
 
 **Note:** There are some useful keyboard shortcuts bound to a key referred to as the *Meta* key, which is typically the <kbd>Option/Alt</kbd> key, but some terminal programs, such as the OS X Terminal, don't enable this by default. If <kbd>Option/Alt</kbd> shortcuts aren't working for you, you probably just need to enable the *Meta* key. On OS X, you can [find this setting](http://osxdaily.com/2013/02/01/use-option-as-meta-key-in-mac-os-x-terminal/) enable this under the settings for each profile's "keyboard" section.
 
