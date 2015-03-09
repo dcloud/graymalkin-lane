@@ -20,12 +20,26 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
     <style type="text/css" media="screen">
+        .reveal section strong {
+            color: #E7AD52;
+        }
         .reveal section img.floating {
             border: none;
             box-shadow: 0 0 6px 2px #666;
         }
         .reveal section img.freed {
             border: none;
+        }
+        .reveal section code {
+            background-color: #28323C;
+        }
+        .reveal section p code {
+            display: inline-block;
+            padding: 0 8px;
+            margin: 0 2px;
+        }
+        .reveal section blockquote p {
+            text-align: justify;
         }
     </style>
 
@@ -58,7 +72,7 @@
 
             <section>
                 <section>
-                    <h2>What is the command line?</h2>
+                    <h1>What is the command line?</h1>
                     <p>
                         or the "shell" or "bash" or "terminal", for that matter
                     </p>
@@ -66,8 +80,8 @@
                 <section>
                     <h2>Bash: GNU Bourne-Again SHell</h2>
                     <blockquote cite="http://linux.die.net/man/1/bash">
-                        &ldquo;Bash  is  an  sh-compatible  command language interpreter that executes
-       commands read from the standard input or from a file.&rdquo;
+                        <p>&ldquo;Bash  is  an  sh-compatible  command language interpreter that executes commands read from the standard input or from a file.&rdquo;</p>
+                        <p>&ndash; <cite>Bash's man page</cite></p>
                     </blockquote>
                 </section>
             </section>
@@ -100,7 +114,7 @@
             </section>
 
             <section>
-                <h2>Let's learn some commands!</h2>
+                <h1>Let's learn some commands!</h1>
                 <p><code>man</code>, <code>ls</code>, <code>cd</code> and more</p>
             </section>
 
@@ -112,14 +126,228 @@
                 </section>
 
                 <section>
+
                     <h2>Try it!</h2>
                     <p>Open a command line (if you haven't already) and<br> type <code>man ls</code>, then hit return.</p>
+                    <p>Use <code>f</code> (or spacebar) to go forward one window and <code>b</code> to go back one window.</p>
                 </section>
 
                 <section>
-                    <p><code>man</code> shows a <strong>man</strong>ual page for a particular command, if available</p>
+                    <p><code>man</code> shows a <strong>man</strong>ual page for a particular command, if available.</p>
+                    <p>You can even view a manual page for <code>man</code>:</p>
+                    <pre><code class="bash" data-trim>dcmbp:~ dcloud$ man man</code></pre>
                 </section>
+            </section>
 
+            <section>
+                <section>
+                    <h2><code>ls</code> is for <strong>l</strong>i<strong>s</strong>ting</h2>
+                    <p>Type <code>ls</code> to "print" a <strong>l</strong>i<strong>s</strong>t of files and<br> directories to the terminal screen.</p>
+                </section>
+                <section>
+                    <p>Use the <code>l</code> and <code>a</code> options to use a long format and show hidden files/directories (starting with a period).</p>
+                    <pre>
+                        <code class="bash" data-trim>ls -al</code>
+                    </pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2><code>pwd</code> and <code>cd</code></h2>
+                    <p>Type <code>pwd</code> to "print" the path to the working directory.</p>
+                    <p>Type <code>cd</code> and a path to change the working directory.</p>
+                </section>
+                <section>
+                    <h2><code>pwd</code> example</h2>
+                    <img class="freed" src="../images/pwd.png" alt="Screenshot: Printing the present working directory">
+                </section>
+                <section>
+                    <h2><code>cd</code> example</h2>
+                    <img class="freed" src="../images/cd.png" alt="Screenshot: Changing the working directory to a different directory">
+                </section>
+                <section>
+                    <h2>Try them both!</h2>
+                    <p>Run <code>pwd</code>. What is <em>your</em> working directory path?</p>
+                    <p><code>cd</code> to another directory. Do you have a <code>~/Downloads</code> directory? Also try a directory you know doesn't exist.</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2><code>cat</code> and <code>less</code> for "printing"</h2>
+                    <p>Not printing to paper, but "printing" to the terminal screen.</p>
+                </section>
+                <section>
+                    <h2><code>cat</code> is for con<strong>cat</strong>enate</h2>
+                    <blockquote cite="https://en.wiktionary.org/wiki/concatenate#Verb">
+                        <p><dfn>concatenate</dfn> /kənˈkætəneɪt/<p>
+                        <ol>
+                            <li>To join or link together, as though in a chain.</li>
+                            <li>Computer instruction to join two strings together.</li>
+                        </ol>
+                    </blockquote>
+                </section>
+                <section>
+                    <h2><code>cat</code> example</h2>
+                    <img class="freed" src="../images/cat.png" alt="Screenshot: cat'ing a file to the terminal">
+                </section>
+                <section>
+                    <h2><code>less</code> is for viewing contents of a file with pagination.</h2>
+                </section>
+                <section>
+                    <h2><code>less</code> example</h2>
+                    <img class="freed" src="../images/less.png" alt="Screenshot: Paging and printing a file to the terminal, using less">
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2><code>grep</code> is for searching for patterns in files</h2>
+                    <p>A pattern can be normal text, but it can also be a <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>.</p>
+                </section>
+                <section>
+                    <h2><code>grep</code> example</h2>
+                    <img class="freed" src="../images/grep.png" alt="Screenshot: Paging and printing a file to the terminal, using grep">
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2><code>cut</code> is for cutting out portions of files</h2>
+                    <p>For example, CSV files can be <code>cut</code> by column.</p>
+                </section>
+                <section>
+                    <h2><code>cut</code> example</h2>
+                    <img class="freed" src="../images/cut.png" alt="Screenshot: Cutting a CSV file and outputting specific columns">
+                </section>
+            </section>
+
+            <section>
+                <h2><code>clear</code> is for <strong>clear</strong>ing the screen</h2>
+                <p>Sometimes you want a clean, empty terminal screen.</p>
+            </section>
+
+            <section>
+                <h1>Your keyboard is powerful!</h1>
+                <p>You'll use the keyboard to navigate and control the command line.</p>
+            </section>
+
+            <section>
+                <h2>General shortcuts</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shortcut</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>Ctrl+c</kbd></td>
+                            <td>Sends a signal telling the operating system to interrupt (stop and close) the current command.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl+d</kbd> </td>
+                            <td>Similar to <kbd>Ctrl+c</kbd>; can tell a running command to quit, such as running an interactive program such as the <code>python</code> interpreter.</td>
+                        </tr>
+                        <tr>
+                            <td>Tab</td>
+                            <td>Autocompletion in the terminal. Start typing and then hit <kbd>Tab</kbd> to see matching commands and files.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl+l</kbd></td>
+                            <td>Clears the screen, like the <code>clear</code> command.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2><kbd>Tab</kbd> completion</h2>
+                <img class="freed" src="../images/tab-completion.png" alt="Screenshot: Using Tab for autocompletion">
+            </section>
+
+            <section>
+                <h2>Keyboard shortcuts for<br> moving the (text) cursor</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Shortcut</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>Ctrl+a</kbd></td>
+                            <td>Move the cursor to the beginning of the line.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl+e</kbd></td>
+                            <td>Move the cursor to the end of the line.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl+f</kbd></td>
+                            <td>Move the cursor &rarr; <strong>f</strong>orward one character.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Ctrl+b</kbd></td>
+                            <td>Move the cursor &larr; <strong>b</strong>ackward one character.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Option/Alt+f</kbd> </td>
+                            <td>Move the cursor <strong>f</strong>orward one <em>word</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Option/Alt+b</kbd> </td>
+                            <td>Move the cursor <strong>b</strong>ackward one <em>word</em>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Your command history</h2>
+                    <p>The things you've typed in the command line and run are<br> saved to a command history.</p>
+                </section>
+                <section>
+                    <h2>Shortcuts for navigating your<br> command history</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Shortcut</th>
+                                <th>What it does</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&uarr;</td>
+                                <td>Navigate backward in your command history</td>
+                            </tr>
+                            <tr>
+                                <td>&darr;</td>
+                                <td>Navigate forward in your command history</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>Ctrl+r</kbd></td>
+                                <td>Initiate a search of your command history, from most recently used backwards.</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>Ctrl+s</kbd></td>
+                                <td>Search forward in your command history to more recent commands.</td>
+                            </tr>
+                            <tr>
+                                <td><kbd>Ctrl+c</kbd></td>
+                                <td>Cancel your search.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Control your <code>history</code></h2>
+                    <p>You can use the <code>history</code> command to<br> inspect or edit your command line history.</p>
+                </section>
             </section>
         </div>
 
