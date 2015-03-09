@@ -23,7 +23,7 @@ There are some useful symbols that help use navigate to certain parts of the fil
 | Shortcut symbol | Meaning | Usage Example |
 | --------------- | ------- | ------------- |
 | `.` | The current directory | `ls ./images` would output the names of files in an images directory that is inside the present working directory |
-| `..` | The "parent" directory (one directory ) | `cd ..` would change the working directory to the one above the current working directory. |
+| `..` | The "parent" directory (one directory above your current directory) | `cd ..` would change the working directory to the one above the current working directory. |
 | `~` | The tilde means your home directory. Modern operating systems are set up for multiple user accounts, so each has their own home directory. | `cd ~` will change your current working directory to your home directory (if that isn't the current working directory already). |
 
 ## Files

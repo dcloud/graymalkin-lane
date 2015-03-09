@@ -349,6 +349,247 @@
                     <p>You can use the <code>history</code> command to<br> inspect or edit your command line history.</p>
                 </section>
             </section>
+
+            <section>
+                <h1>Control files &amp; directories!</h1>
+                <p>learn to use <em>paths</em>, find hidden files and more</p>
+            </section>
+
+            <section>
+                <h2>What is the filesystem?</h2>
+                <p>The filesystem represents information on *all* hard drives, media, and network drives attached to your computer.</p>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Follow the <em>path</em></h2>
+                    <p>A path is a way of referencing the unique location of a file or directory in the file system.</p>
+                </section>
+                <section>
+                    <h2>It's like a URL&hellip;</h2>
+                    <p>When you run <code>pwd</code>, you get back a <em>path</em> to your working directory.</p>
+                    <pre>
+                        <code class="bash" data-trim>dcmbp:graymalkin-lane dcloud$ pwd
+/Users/dcloud/Documents/graymalkin-lane</code>
+                    </pre>
+                </section>
+                <section>
+                    <h2>Relative or absolute</h2>
+                    <p>Paths can be <em>relative</em> to your current working directory or <em>absolute</em>.</p>
+                    <p>For example, when working from my home directory, <code>/Users/dcloud</code>, the following represent the same path:</p>
+                    <table>
+                        <thead>
+                            <tr class="fragment" data-fragment-index="1">
+                                <th>Type</th>
+                                <th>Path</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fragment" data-fragment-index="1">
+                                <td>Absolute</td>
+                                <td><code>/Users/dcloud/Documents/graymalkin-lane</code></td>
+                            </tr>
+                            <tr class="fragment">
+                                <td>Relative</td>
+                                <td><code>Documents/graymalkin-lane</code></td>
+                            </tr>
+                            <tr class="fragment">
+                                <td>Relative</td>
+                                <td><code>./Documents/graymalkin-lane</code></td>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Path shortcut symbols</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>~</code></td>
+                                <td>Home</td>
+                            </tr>
+                            <tr class="fragment">
+                                <td><code>.</code></td>
+                                <td>The current directory</td>
+                            </tr>
+                            <tr class="fragment">
+                                <td><code>..</code></td>
+                                <td>The "parent" directory (one directory above your current directory)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Try it out with <code>cd</code> or <code>ls</code></h2>
+                    <ul>
+                        <li><code>ls ~</code></li>
+                        <li><code>ls .</code></li>
+                        <li><code>ls ..</code></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Files: text versus binary</h2>
+                    <h3>(and why you should care)</h3>
+                </section>
+                <section>
+                    <h2>What is the difference</h2>
+                    <p>Text files can be store "plain" text (they contain no formatting such as bold or italic). A plain text file can conform to a syntax in order to represent prose, code, markup or structured data.</p>
+                    <p>Binary is the format used for images, videos, music and similar.</p>
+                </section>
+                <section>
+                    <h2>Is it text or is it binary?</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>File extension</th>
+                                <th>Text or binary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fragment"><code>.html</code></td>
+                                <td class="fragment">text (html is the syntax)</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.jpg</code></td>
+                                <td class="fragment">binary (but contains metadata that is text)</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.js</code></td>
+                                <td class="fragment">text (JavaScript is the syntax)</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.csv</code></td>
+                                <td class="fragment">text ("comma-separated values" is the syntax)</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.docx</code></td>
+                                <td class="fragment">binary (mostly)</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.pdf</code></td>
+                                <td class="fragment">binary with some text embedded</td>
+                            </tr>
+                            <tr>
+                                <td class="fragment"><code>.py</code></td>
+                                <td class="fragment">text (python is the syntax)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Bad idea: <code>cat</code> a binary file</h2>
+                    <p>While tools like <code>cat</code> and <code>less</code> are made for text files, they will try to print the contents of a binary file to your terminal window. Try it out, but be ready to <kbd>Ctrl+c</kbd> if the command stalls on a large file.</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Hidden files</h2>
+                <p>If you start a file or directory name with a period,<br> it will not be visible.</p>
+                <p><code>ls</code> will show hidden files if the <code>a</code> option is specified:</p>
+                <pre>
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ ls -a</code>
+                </pre>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Spaces in file or directory names</h2>
+                    <p>You may be accustomed to naming files/directories with spaces in them, like <code>My Great Project.txt</code>. Since spaces are used to separate arguments to commands on the command line, file/directory names are <em>undesirable</em>.</p>
+                </section>
+                <section>
+                    <h2>If you have to:</h2>
+                    <p>If you have paths where there are files or folders with spaces in the name, you can put quotation marks around the path to make commands treat it as a single argument:</p>
+                    <pre>
+                        <code class="bash">cat "/path/to/My Great Project.txt"</code>
+                    </pre>
+                </section>
+            </section>
+
+            <section>
+                <h2>File-related commands</h2>
+                <p>Creating, renaming, copying, etc.</p>
+            </section>
+            <section>
+                <h2><code>mkdir</code> is for making directories</h2>
+                <p>Type <code>mkdir</code> and provide a directory name as an argument.</p>
+                <pre class="fragment">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ mkdir ~/dirname</code>
+                </pre>
+            </section>
+            <section>
+                <h2><code>rmdir</code> is for removing directories</h2>
+                <p>Type <code>rmdir</code> and provide a directory name as an argument.</p>
+                <pre class="fragment">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ rmdir ~/dirname</code>
+                </pre>
+                <p>Directories cam have hidden files (this is very common on OS X) that prevent this command from working.</p>
+            </section>
+            <section>
+                <h2><code>touch</code> is for creating files</h2>
+                <p>Technically <q>sets the modification and access times of files</q>, but can also create empty files.</p>
+                <pre class="fragment">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ touch mynewfile.txt</code>
+                </pre>
+            </section>
+            <section>
+                <h2><code>mv</code> is for <strong>m</strong>o<strong>v</strong>ing and renaming files</h2>
+                <p><strong>Warning:</strong> This command can overwrite a file at the target you specify without confirming.</p>
+                <pre class="fragment" data-fragment-index="1">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ mv mynewfile.txt ~/Downloads/mynewerfile.txt</code>
+                </pre>
+                <p class="fragment" data-fragment-index="2"><code>mv -i</code> will prompt you for confirmation.</p>
+                <pre class="fragment" data-fragment-index="2">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ mv -i  mynewfile.txt ~/Downloads/mynewerfile.txt
+overwrite /Users/dcloud/Downloads/mynewerfile.txt? (y/n [n])</code>
+                </pre>
+            </section>
+            <section>
+                <h2><code>cp</code> is for <strong>c</strong>o<strong>p</strong>ying</h2>
+                <p><strong>Warning:</strong> This command can overwrite a file at the target you specify without confirming.</p>
+                <pre class="fragment" data-fragment-index="1">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ cp mynewerfile.txt mynewerfile2.txt</code>
+                </pre>
+                <p class="fragment" data-fragment-index="2"><code>cp -i</code> will prompt you for confirmation.</p>
+                <pre class="fragment" data-fragment-index="2">
+                    <code class="bash" data-trim>dcmbp:~ dcloud$ cp -i mynewerfile.txt mynewerfile2.txt
+overwrite mynewerfile2.txt? (y/n [n])</code>
+                </pre>
+            </section>
+            <section>
+                <section>
+                    <h2><code>rm</code> is for <strong>r</strong>e<strong>m</strong>oving</h2>
+                    <p><strong>Warning:</strong> This command will remove a file without confirming.</p>
+                    <pre class="fragment" data-fragment-index="1">
+                        <code class="bash" data-trim>dcmbp:~ dcloud$ rm mynewerfile2.txt</code>
+                    </pre>
+                    <p class="fragment" data-fragment-index="2"><code>rm -i</code> will prompt you for confirmation.</p>
+                    <pre class="fragment" data-fragment-index="2">
+                        <code class="bash" data-trim>dcmbp:~ dcloud$ rm -i mynewerfile2.txt
+    remove mynewerfile2.txt?</code>
+                    </pre>
+                </section>
+                <section>
+                    <h2><code>rm</code> a directory</h2>
+                    <p><code>rm</code> can optionally <strong>r</strong>ecursively <strong>r</strong>e<strong>m</strong>ove files in directories.</p>
+                    <p><strong>Warning:</strong> This command will remove a file without confirming.</p>
+                    <pre class="fragment" data-fragment-index="1">
+                        <code class="bash" data-trim>rm -r foo/</code>
+                    </pre>
+                    <p class="fragment" data-fragment-index="2"><code>rm -i</code> will prompt you for confirmation.</p>
+                    <pre class="fragment" data-fragment-index="2">
+                        <code class="bash" data-trim>dcmbp:~ dcloud$ rm -ri mydir/
+examine files in directory mydir/?</code>
+                </section>
+            </section>
         </div>
 
     </div>
@@ -372,16 +613,6 @@
             src: 'lib/js/classList.js',
             condition: function() {
                 return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
             }
         }, {
             src: 'plugin/highlight/highlight.js',
