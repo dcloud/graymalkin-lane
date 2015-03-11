@@ -15,6 +15,7 @@ Below is a collection of arbitrary commands that you might fund useful. Some of 
 | csvkit: `csvgrep`, `csvstat`, etc. | `csvkit` is a suite of tools for working with CSV files. You can `pip install csvkit` (if you have `pip` installed) |
 | `info` | Some tools provide documentation in "INFO" format. `info` |
 | `killall` | `killall` "kills processes selected by name". Someday you need to kill processes this way. |
+| `which` | "locate a program file in the user's path" |
 
 ## Tools to be aware of
 
