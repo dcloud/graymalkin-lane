@@ -4,7 +4,7 @@ You are going to run commands on the command line (in Terminal), record observat
 
 ## `ls` and paths
 
-You can **l**i**s**t the contents of directories using the `ls` command. Let's explore!
+We're going to run a command (small program) called `ls` and try to figure out what it does. Let's explore!
 
 1. In the terminal, type `ls` and press Return. What do you see? Compare that to the contents of the Finder window. Write down your observations.
 
@@ -20,9 +20,7 @@ You can **l**i**s**t the contents of directories using the `ls` command. Let's e
 
 ## `cd`, `pwd` to move around
 
-On the command line, there is a strong sense of location; you are always executing commands from a directory on the filesystem. Running `ls` above may have given you some hints about your starting directory.
-
-The `cd` command allows to you **c**hange **d**irectories and `pwd` will **p**rint (display) the **w**orking **d**irectory. Now let's explore using `cd` and `pwd`!
+On the command line, there is a strong sense of location; you are always executing commands from a directory on the filesystem. Running `ls` above may have given you some hints about your starting directory. Now let's explore further using `cd` and `pwd`!
 
 7. Type `cd /Applications` in the Terminal and press Return. What happened? Write down your observations. Now type `ls` and press Return. What do you see? Why do you think this is?
 
@@ -30,6 +28,5 @@ The `cd` command allows to you **c**hange **d**irectories and `pwd` will **p**ri
 
 9. Type `cd foobar` and press Return. What happened? What do you think this means?
 
-10. Type `cd ~/Downloads` and press Return. What happened? Now type `cd ..` and press Return. What happened? What do you think `..` could signify?
+10. Type `cd ~/Downloads` and press Return. What happened? Now type `cd ..` and press Return. What happened? What do you think `~` and `..` could signify?  Type `cd ~`. Where are you now?
 
-11. Type `cd ~`. Where are you now? What do you think `~` signifies?
