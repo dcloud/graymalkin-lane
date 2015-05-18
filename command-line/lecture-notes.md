@@ -272,7 +272,7 @@ curl http://httpbin.org/html -o httpbin_html.html
 
 `curl` can output transfer information (i.e., download time) and the URL response content by default. The `-o` indicates the response content should be stored in a file. You can use ` --silent` to tell it not to output transfer information.
 
-**Takeaway:** We can interact with information from the internet and use them in our commands!
+**Takeaway:** We can interact with information from the Internet and use them in our commands!
 
 #### Now we're playing with power: `curl` and `grep` and `less`
 
@@ -300,7 +300,7 @@ ping -c 10 www.apple.com
 
 The `-c 10` option tells `ping` to only send 10 message "packets", otherwise `ping` will continue until we <kbd>Ctrl+c</kbd> (abort/quit/cancel) it.
 
-**Takeaway:** We can perform a rudimentary (not definiteve) check to see if a host is down or not.
+**Takeaway:** We can perform a rudimentary (not definitive) check to see if a host is down or not.
 
 ### `traceroute` is for tracing the route data takes to get to a remote host
 
@@ -309,5 +309,5 @@ The `-c 10` option tells `ping` to only send 10 message "packets", otherwise `pi
 traceroute www.apple.com
 ```
 
-**Takeaway:** We can see how our data is routed over the internet. Try it at home!
+**Takeaway:** We can see how our data is routed over the Internet. Try it at home!
 
