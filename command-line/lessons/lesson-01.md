@@ -1,4 +1,21 @@
-# Lesson 1: What is the command line?
+Lesson 1 Outline
+
+- What is the command line?
+    - What a physical terminal looked like
+    - How this relates to modern terminal
+- The filesystem and some introductory commands
+    - ls and cd **Activity** and review
+    - Discussion: filesystem paths
+        -Spaces in directories and file names
+- Getting help!
+    - Duck/Google search for man pages
+    - Reading about cd and ls & arguments and options
+- Streams: Input/Output
+    - streams are data available over time.
+    - Activity: I/O streams
+- Questions?
+
+# What is the command line?
 
 ## Defining the command line
 
@@ -85,7 +102,7 @@ cat "/path/to/My Great Project.txt"
 
 There is a command called `man`, which is short for **man**ual, that allows you to look up documentation on about various commands. However, you can also search online for the same documentation, so that might be easier for now. You can search for `man ls` on Google or [DuckDuckGo](https://duckduckgo.com) and many results will come up. DuckDuckGo provides "instant answers", so you don't necessarily need to go to a web page!
 
-## Help: Reading about `cd` and `ls` and `pwd`
+## Reading about `cd` and `ls` and `pwd`
 
 A manual page has a few sections, usually starting with **Name**, which provides a name and a brief description of the command.
 
@@ -114,7 +131,11 @@ The synopsis provides a compact representation of how a command can be used, usi
 
 Looking first at the second set of brackets, the `ls` command can accept one or more `[FILE]` arguments (I don't know why some man pages use the word "file" when it is "paths"). So you can have `ls` list the contents of *multiple* directories at once. There are also many *options* you can provide to `ls`, which you indicate with single or double hyphens.
 
-#### `ls` options
+#### Discussion: `ls` options
+
+What are some possibly useful options for `ls`?
+
+*Have students read man page and suggest some things.*
 
 | Option | Example | Effect |
 | :- | :- | :- |
@@ -123,4 +144,24 @@ Looking first at the second set of brackets, the `ls` command can accept one or 
 | -F | `ls -F` | Add symbols to differentiate files from directories from other things |
 | -alF | `ls -alF` | Combine multiple options! |
 
-So many options!
+`-h`?
+
+**Note:** The implementation of ls can be a bit different between Mac and Linux, so some options you see online may not work as described.
+
+# Streams, input, output
+
+The command line conceptualizes information as streams, *data available over time*. Time in this case can be seconds or less.
+
+Information coming out of a program is a stream of data that can be displayed to a user on a monitor, or it could be written out to a file. Some programs require a stream of input from a file or from the keyboard.
+
+This is different from how we think of information in graphical systems, and will become clearer the more we work with them. When we download large files from the Internet, we are aware of that information coming to our computer over time.
+
+There are three standard streams called `stdin`, `stdout` and `stderr`. `stdin` is for information going into the program, so the keyboard is usually where this stream comes from. `stdout` is where a program outputs its data by default: the screen. `stderr` is where errors from a program get sent, this is usually location as `stdout`, the screen. We can change where our programs get input and sent output (or errors)!
+
+## Activity: I/O streams
+
+Have students open a terminal and a Finder window side by side; both should be in their home directory.
+
+Students can pair up (or work individually, if they prefer) and complete the ["Input/Output Streams" activity](../activities/input-output-activity.md). They should be able to complete this in 15 minutes, hopefully less.
+
+# Questions?
